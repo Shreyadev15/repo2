@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background-image: url(/pics/fantasy.jpg);
+    background-image: linear-gradient(red,yellow);
+    background-image: url(/pics/fantasy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0,7),rgba(4,9,30,0.7)),url(pics/googleplace.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.main{
+    /* padding:10px auto;
+    margin: 30%; */
+}
+nav{
+    height: 80px;
+}
+nav .logo{
+    width: 150px;
+    position: absolute;
+    top: 17px;
+    left:12%;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+nav ul li a:before{
+    position: absolute;
+    content:'';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:100%;
+    background: white;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,
+label #cancle{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.linkbtn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+}
+.linkbtn:hover{
+    border: 1px solid green;
+    background: #2d972d;
+    transition: .7s;
+}
+/* -------------------box------ */
+
+.col{
+    border-radius: 25px;
+    border: 1px solid #033a03;
+    color: #fff;
+    height: 100px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 40%;
+    text-align: center;
+}
+.col:hover{
+    background: #929090;
+    transition: linear .5s;
+}
+.bcol{
+    border-radius: 20px;
+    border: 1px solid #033a03;
+    color: #fff;
+    height: 100px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 35px;
+    text-align: center;
+}
+.bcol:hover{
+    background: #929090;
+    transition: linear .5s;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear:both;
+}
+.button{
+    padding: 5px;
+    border:hidden;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: #ca0b2b;
+    color: #fff;
+    transition: linear .5s;
+}
+
+
+
+/* .container{
+    width: 800px;
+    margin: 40% auto 0;
+    display: table;
+    box-sizing: border-box;
+    opacity: 0.3;
+    
+}
+.row{
+    margin: 20px 0;
+    border-left: 10px solid #fff;
+}
+.col{
+    background: #ccc;
+    display: table-cell;
+    padding: 20px;
+    width:200px;
+    height: 150px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    justify-content: space-around;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+}
+.col p{
+    margin: 5%;
+    font-weight: bold;
+    color:black;
+} */
+
+/* -------------------box-------------- */
+
+/* ------------viewport----------------- */
+@media (max-width: 1000px){
+    body{
+        background-position: center;
+        background-size: cover;
+    }
+    nav .logo{ 
+    left: 8%;
+    }
+    .col{
+    margin-left: 20px;
+    margin-top: 50%;
+    }
+    .bcol{
+        margin-left: 20px;
+    margin-top: 5%;
+    }
+}
+@media (max-width: 950px){
+    body{
+        background-image: url(/pics/pubg.jpg);
+        background-size: cover;
+        
+    }
+    nav logo{
+        left: 6%;
+        top: 20px;
+        width: 130px;
+    }
+}
+@media (max-width: 860px){
+    .col{
+        width: 100%;
+    }
+    body{
+        background-image: url(/pics/pubg.jpg);
+        background-size:cover;
+        background-position: top;
+    }
+    label #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: red;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #checked:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~label #cancle{
+        display: block;
+    }
+}
+
+/* --------------background---------- */
